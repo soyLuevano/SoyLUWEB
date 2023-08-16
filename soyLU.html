@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subir Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #upload-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #upload-button {
+            display: block;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        progress {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="upload-container">
+        <h2>Subir Video</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="video-input" name="video" accept="video/*" />
+            <button type="button" id="upload-button">Subir Video</button>
+            <progress id="upload-progress" value="0" max="100"></progress>
+        </form>
+    </div>
+    <script>
+        // El JavaScript permanece igual
+    </script>
+</body>
+</html>

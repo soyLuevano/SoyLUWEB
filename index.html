@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Videos - Acceso Protegido</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Subir Videos - Acceso Protegido</h1>
+        <form id="login-form">
+            <label for="password">Ingresa la contraseña:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <input type="submit" value="Ingresar">
+        </form>
+        <p id="error-message" class="error-message">Contraseña incorrecta. Inténtalo nuevamente.</p>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            var password = document.getElementById("password").value;
+            var correctPassword = "123"; // Reemplaza esto con la contraseña correcta
+            
+            if (password === correctPassword) {
+                window.location.href = "soyLU.html"; // Redirige a la página de subida si la contraseña es correcta
+            } else {
+                var errorMessage = document.getElementById("error-message");
+                errorMessage.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
