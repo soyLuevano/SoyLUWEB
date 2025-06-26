@@ -1,54 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Subir Video</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spica - Tu Asistente Personal Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
         }
-
-        #upload-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
+        .header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 2em 0;
             text-align: center;
         }
-
-        #upload-button {
-            display: block;
-            margin-top: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
         }
-
-        progress {
-            display: block;
-            width: 100%;
+        .header p {
+            font-size: 1.2em;
             margin-top: 10px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 2em auto;
+            padding: 0 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 2em;
+            margin-bottom: 2em;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            text-align: center;
+        }
+        .feature-item {
+            flex: 1;
+            min-width: 280px;
+            padding: 1.5em;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        }
+        .feature-item h3 {
+            color: #34495e;
+            margin-top: 0;
+        }
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 2em auto 0;
+            background-color: #27ae60;
+            color: #fff;
+            padding: 1em 2em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.3em;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #2ecc71;
+        }
+        .footer {
+            text-align: center;
+            padding: 1.5em 0;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            margin-top: 2em;
+        }
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-item {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="upload-container">
-        <h2>Subir Video</h2>
-        <form id="upload-form" enctype="multipart/form-data">
-            <input type="file" id="video-input" name="video" accept="video/*" />
-            <button type="button" id="upload-button">Subir Video</button>
-            <progress id="upload-progress" value="0" max="100"></progress>
-        </form>
+
+    <header class="header">
+        <h1>Spica</h1>
+        <p>Tu asistente personal inteligente para un futuro más eficiente.</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>¿Qué es Spica?</h2>
+            <p>Spica es un asistente inteligente de última generación diseñado para simplificar tu vida diaria y potenciar tu productividad. Utilizando inteligencia artificial avanzada, Spica puede ayudarte con una amplia gama de tareas, desde organizar tu agenda hasta brindarte información instantánea.</p>
+            <p>Imagina tener un compañero digital siempre listo para asistirte, aprender de tus hábitos y anticipar tus necesidades. ¡Esa es Spica!</p>
+        </section>
+
+        <section class="section">
+            <h2>Características Principales</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <h3>Gestión de Tareas</h3>
+                    <p>Organiza tus listas de pendientes, establece recordatorios y prioriza tus actividades con facilidad. Spica te ayuda a mantenerte en el camino.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Automatización Inteligente</h3>
+                    <p>Configura rutinas personalizadas y deja que Spica se encargue de las tareas repetitivas, liberando tu tiempo para lo que realmente importa.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Acceso a Información</h3>
+                    <p>Obtén respuestas rápidas a tus preguntas, noticias actualizadas y cualquier dato que necesites, al instante y sin esfuerzo.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Integración Total</h3>
+                    <p>Spica se conecta sin problemas con tus aplicaciones y dispositivos favoritos, creando un ecosistema digital cohesivo y eficiente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>¿Por qué elegir a Spica?</h2>
+            <p>En un mundo cada vez más rápido, Spica te ofrece la ventaja de la eficiencia y la inteligencia. No solo te ahorra tiempo, sino que también mejora tu concentración y reduce el estrés al encargarse de las pequeñas cosas para que tú puedas enfocarte en tus metas más grandes.</p>
+            <p>Spica es más que un asistente; es un socio estratégico en tu día a día.</p>
+        </section>
+
+        <a href="#contacto" class="cta-button">¡Descubre el poder de Spica hoy!</a>
     </div>
-    <script>
-        // El JavaScript permanece igual
-    </script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Spica. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
+
